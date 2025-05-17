@@ -65,16 +65,25 @@ python main.py --enroll data/clerk.wav --audio data/test.wav --threshold 0.7 --h
 ```
 
 ```text
-INFO: Using device: cuda
-INFO: Processing reference audio data/john_doe.wav...
-INFO: Generated reference for 'SPEAKER_00' from 5 segments.
+INFO: Using device: cpu
+INFO: Loading diarization pipeline...
+INFO: Diarization pipeline loaded.
+INFO: Loading embedding model…
+INFO: Embedding model loaded.
+INFO: Processing reference audio clerk.wav...
+INFO: Generated reference for 'SPEAKER_00' from 21 segments in clerk.wav.
 INFO: Successfully obtained reference embedding for Enrolled Voice.
-INFO: Processing test audio data/meeting.wav...
+INFO: Processing test audio test_2.wav...
 
 --- Speaker Identification Result ---
-[00:00:02.500 --> 00:00:10.200] Speaker: USER
-[00:00:10.200 --> 00:00:15.000] Speaker: UNKNOWN
-...
+[00:00:00.030 --> 00:00:07.624] Speaker: UNKNOWN
+[00:00:08.552 --> 00:00:11.269] Speaker: USER
+[00:00:11.708 --> 00:00:12.282] Speaker: UNKNOWN
+[00:00:12.771 --> 00:00:13.379] Speaker: USER
+[00:00:14.037 --> 00:00:14.459] Speaker: UNKNOWN
+[00:00:14.847 --> 00:00:16.180] Speaker: USER
+[00:00:18.441 --> 00:00:22.947] Speaker: UNKNOWN
+
 INFO: Processing finished.
 ```
 
